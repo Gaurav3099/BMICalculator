@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bmi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.gaurav.bmicalculator.bmi">
+
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHello"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Enter your Height"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spnFeet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFeet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp" />
+
+    <TextView
+        android:id="@+id/tvInch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvFeet"
+        android:layout_alignRight="@+id/tvFeet"
+        android:layout_below="@+id/spnFeet"
+        android:layout_marginTop="34dp"
+        android:text="Inch" />
+
+    <Spinner
+        android:id="@+id/spnInch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvInch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <TextView
+        android:id="@+id/tvFeet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Feet" />
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spnInch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Enter your Weight"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Enter weight in kg"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnBmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etWeight"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@+id/spnInch"
+        android:layout_toRightOf="@+id/spnInch"
+        android:text="Calculate BMI" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnBmi"
+        android:layout_toLeftOf="@+id/spnInch"
+        android:layout_toStartOf="@+id/spnInch"
+        android:text="View History" />
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvHeight"
+        android:layout_toLeftOf="@+id/etWeight"
+        android:layout_toStartOf="@+id/etWeight"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnBmi"
+        android:layout_alignRight="@+id/btnBmi"
+        android:layout_alignTop="@+id/tvLocation"
+        android:text="" />
+
+</RelativeLayout>
